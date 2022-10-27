@@ -1,0 +1,13 @@
+body{
+    background-color:rgb(240, 239, 239);
+    font-family: 'Cabin', sans-serif;
+}
+
+.carousel-item img{
+    max-height: 30rem;
+}
+
+.contacto{
+    color: white;
+}
+

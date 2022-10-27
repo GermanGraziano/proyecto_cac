@@ -1,51 +1,217 @@
 
-    {% extends "./base.html" %}
+{% extends "./base.html" %}
     
+{% block titulo %}Index{% endblock %}
     
-    {% block titulo %}Index{% endblock %}
-    
-    {% block contenido %}
-    <!--galeria de imgenes-->
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+{% block contenido %}
+<!--Galería de imágenes-->
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="padding: 55px">
     <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval = "3000" >
+      <div class="carousel-item active" data-bs-interval = "2000" >
         {% load static %}
-        <img src="{% static '../../../../../static/img/img1.jpg' %}" class="d-block w-100" alt="...">
+        <img src="{% static '../../../../../static/img/imagen1.jpg' %}" class="d-block w-90" alt="...">
       </div>
-      <div class="carousel-item" data-bs-interval = "3000">
+      <div class="carousel-item" data-bs-interval = "2000">
         {% load static %}
-        <img src="{% static '../../../../../static/img/img2.jpg' %}" class="d-block w-100" alt="...">
+        <img src="{% static '../../../../../static/img/imagen2.jpg' %}" class="d-block w-90" alt="...">
       </div>
-      <div class="carousel-item" data-bs-interval = "3000">
+      <div class="carousel-item" data-bs-interval = "2000">
         {% load static %}
-        <img src="{% static '../../../../../static/img/img3.webp' %}" class="d-block w-100" alt="...">
+        <img src="{% static '../../../../../static/img/imagen3.jpg' %}" class="d-block w-90" alt="...">
       </div>
+      <div class="carousel-item" data-bs-interval = "2000">
+        {% load static %}
+        <img src="{% static '../../../../../static/img/imagen4.jpg' %}" class="d-block w-90" alt="...">
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
     </div>
   </div>
   <hr class="text-black"> 
 
-  <!--libros-->
+  <!--Categorías-->
+  <!--Fila 1-->
+  <div class="card-group" id="fila1">
+    <div class="card">
+      {% load static %}
+      <img src="{% static '../../../../../static/img/portada_libro.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body" id="artes">
+        <h5 class="card-title">Artes</h5>
+        <p class="card-text">Descripción<br><a href="#">Ver mas...</a></p>
+      </div>
+    </div>
+    <div class="card">
+      {% load static %}
+      <img src="{% static '../../../../../static/img/portada_libro.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body" id="biologia">
+        <h5 class="card-title">Biología</h5>
+        <p class="card-text">Descripción<br><a href="#">Ver mas...</a></p>
+      </div>
+    </div>
+    <div class="card">
+      {% load static %}
+      <img src="{% static '../../../../../static/img/portada_libro.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body" id="ciencia">
+        <h5 class="card-title">Ciencia</h5>
+        <p class="card-text">Descripción<br><a href="#">Ver mas...</a></p>
+      </div>
+    </div>
+    <div class="card">
+      {% load static %}
+      <img src="{% static '../../../../../static/img/portada_libro.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Cocina</h5>
+        <p class="card-text">Descripción<br><a href="#">Ver mas...</a></p>
+      </div>
+    </div>
+    <div class="card">
+      {% load static %}
+      <img src="{% static '../../../../../static/img/portada_libro.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Computación e Informática</h5>
+        <p class="card-text">Descripción<br><a href="#">Ver mas...</a></p>
+      </div>
+    </div>
+    <div class="card">
+      {% load static %}
+      <img src="{% static '../../../../../static/img/portada_libro.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Comunicación</h5>
+        <p class="card-text">Descripción<br><a href="#">Ver mas...</a></p>
+      </div>
+    </div>
+  </div>
+  <!--Fila 2-->
+  <div class="card-group" id="fila2">
+    <div class="card">
+      {% load static %}
+      <img src="{% static '../../../../../static/img/portada_libro.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Deportes</h5>
+        <p class="card-text">Descripción<br><a href="#">Ver mas...</a></p>
+      </div>
+    </div>
+    <div class="card">
+      {% load static %}
+      <img src="{% static '../../../../../static/img/portada_libro.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Derecho</h5>
+        <p class="card-text">Descripción<br><a href="#">Ver mas...</a></p>
+      </div>
+    </div>
+    <div class="card">
+      {% load static %}
+      <img src="{% static '../../../../../static/img/portada_libro.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Economía</h5>
+        <p class="card-text">Descripción<br><a href="#">Ver mas...</a></p>
+      </div>
+    </div>
+    <div class="card">
+      {% load static %}
+      <img src="{% static '../../../../../static/img/portada_libro.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body" id="ficcion">
+        <h5 class="card-title">Ficción</h5>
+        <p class="card-text">Descripción<br><a href="#">Ver mas...</a></p>
+      </div>
+    </div>
+    <div class="card">
+      {% load static %}
+      <img src="{% static '../../../../../static/img/portada_libro.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Humanidades</h5>
+        <p class="card-text">Descripción<br><a href="#">Ver mas...</a></p>
+      </div>
+    </div>
+    <div class="card">
+      {% load static %}
+      <img src="{% static '../../../../../static/img/portada_libro.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body" id="infantil">
+        <h5 class="card-title">Infantil</h5>
+        <p class="card-text">Descripción<br><a href="#">Ver mas...</a></p>
+      </div>
+    </div>
+  </div>
+  <!--Fila 3-->
+  <div class="card-group" id="fila3">
+    <div class="card">
+      {% load static %}
+      <img src="{% static '../../../../../static/img/portada_libro.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Lenguas</h5>
+        <p class="card-text">Descripción<br><a href="#">Ver mas...</a></p>
+      </div>
+    </div>
+    <div class="card">
+      {% load static %}
+      <img src="{% static '../../../../../static/img/portada_libro.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body" id="literatura">
+        <h5 class="card-title">Literatura</h5>
+        <p class="card-text">Descripción<br><a href="#">Ver mas...</a></p>
+      </div>
+    </div>
+    <div class="card">
+      {% load static %}
+      <img src="{% static '../../../../../static/img/portada_libro.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Medicina</h5>
+        <p class="card-text">Descripción<br><a href="#">Ver mas...</a></p>
+      </div>
+    </div>
+    <div class="card">
+      {% load static %}
+      <img src="{% static '../../../../../static/img/portada_libro.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Salud y Bienestar</h5>
+        <p class="card-text">Descripción<br><a href="#">Ver mas...</a></p>
+      </div>
+    </div>
+    <div class="card">
+      {% load static %}
+      <img src="{% static '../../../../../static/img/portada_libro.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Tecnología</h5>
+        <p class="card-text">Descripción<br><a href="#">Ver mas...</a></p>
+      </div>
+    </div>
+    <div class="card">
+      {% load static %}
+      <img src="{% static '../../../../../static/img/portada_libro.jpg' %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Viajes y Vacaciones</h5>
+        <p class="card-text">Descripción<br><a href="#">Ver mas...</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!--Libros
   <div class="container text-center mt-4">
     <div class="row mt-3">
       <div class = "col">
         {% load static %}
         <img src="{% static '../../../../../static/img/libro1.jpeg' %}" alt="" width="180" height="200">
         <h3>El principito</h3>
-        <p>Descripción del libro<a href="#"> ver más...</a></p>
+        <p>Descripcion del libro<a href="#"> ver mas...</a></p>
         <button type="button" class="btn btn-warning">Comprar</button>
       </div>
       <div class="col">
         {% load static %}
         <img src="{% static '../../../../../static/img/libro2.webp' %}" alt="" width="180" height="200">
         <h3>El quinto infierno</h3>
-        <p>Descripción del libro<a href="#"> ver más...</a></p>
+        <p>Descripcion del libro<a href="#"> ver mas...</a></p>
         <button type="button" class="btn btn-warning">Comprar</button>
       </div>
       <div class="col">
         {% load static %}
         <img src="{% static '../../../../../static/img/libro3.png' %}" alt="" width="180" height="200">
         <h3>El bosque despierto</h3>
-        <p>Descripción del libro<a href="#"> ver más...</a></p>
+        <p>Descripcion del libro<a href="#"> ver mas...</a></p>
         <button type="button" class="btn btn-warning">Comprar</button>
       </div>
     </div>
@@ -54,19 +220,19 @@
         <div class="col">
           <img src="{% static '../../../../../static/img/libro4.jpg' %}" alt="" width="180" height="160">
           <h3>Dejemos huella</h3>
-          <p>Descripción del libro<a href="#"> ver más...</a></p>
+          <p>Descripcion del libro<a href="#"> ver mas...</a></p>
           <button type="button" class="btn btn-warning">Comprar</button>
         </div>
         <div class="col">
           <img src="{% static '../../../../../static/img/libro5.jpg' %}" alt="" width="180" height="160">
-          <h3>Alicia en el país de las Maravillas</h3>
-          <p>Descripción del libro <a href="#"> ver más...</a></p>
+          <h3>Alicia en el pais de las Maravillas</h3>
+          <p>Descripcion del libro <a href="#"> ver mas...</a></p>
           <button type="button" class="btn btn-warning">Comprar</button>
         </div>
         <div class="col">
           <img src="{% static '../../../../../static/img/libro6.jpg' %}" alt="" width="180" height="160">
           <h3>Harry Potter y la piedra filosofal</h3>
-          <p>Descripción del libro <a href="#"> ver más...</a></p>
+          <p>Descripcion del libro <a href="#"> ver mas...</a></p>
           <button type="button" class="btn btn-warning">Comprar</button>
         </div>
       </div>
@@ -75,21 +241,70 @@
         <div class="col">
           <img src="{% static '../../../../../static/img/libro7.jpg' %}" alt="" width="180" height="160">
           <h3>Living alone</h3>
-          <p>Descripción del libro<a href="#"> ver más...</a></p>
+          <p>Descripcion del libro<a href="#"> ver mas...</a></p>
           <button type="button" class="btn btn-warning">Comprar</button>
         </div>
         <div class="col">
           <img src="{% static '../../../../../static/img/libro8.jpg' %}" alt="" width="180" height="160">
           <h3>Arrivals</h3>
-          <p>Descripción del libro<a href="#"> ver más...</a></p>
+          <p>Descripcion del libro<a href="#"> ver mas...</a></p>
           <button type="button" class="btn btn-warning">Comprar</button>
         </div>
         <div class="col">
           <img src="{% static '../../../../../static/img/libro9.jpg' %}" alt="" width="180" height="160">
-          <h3>Esencia</h3>
-          <p>Descripción del libro<a href="#"> ver más...</a></p>
+          <h3>Escencia</h3>
+          <p>Descripcion del libro<a href="#"> ver mas...</a></p>
           <button type="button" class="btn btn-warning">Comprar</button>
         </div>
       </div>
+</div>-->
+
+{% load crispy_forms_tags %}
+
+<section class="mb-4 container">
+<br>
+<br>
+  <div class="row">
+
+    <div class="col-12 col-md-6 offset-md-3">
+
+      <div class="card text-dark bg-light">
+
+        <div class="card-body" id="contacto">
+         
+          <!--Section heading-->
+          <h2 class="h1-responsive font-weight-bold text-center my-4">~  Contacto  ~</h2>
+          <!--Section description-->
+          <p class="text-center w-responsive mx-auto mb-5">Si tiene alguna consulta, no dude en contactarnos!<br> 
+            Les responderemos a la brevedad.</p>
+
+          <div class="status"></div>
+          {% if mensaje %}
+            <div class="alert alert-dark text-center" role="alert">
+              {{mensaje}}
+            </div>
+          {% endif %}
+
+          <form novalidate id="contact-form" name="contact-form" action="{% url 'inicio' %}" method="POST">
+            {% csrf_token %}
+            {{ contacto_form | crispy }} 
+
+            <div class="text-center text-md-left mt-3">
+              <button class="btn btn-dark" type="submit">Enviar</button>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input class="btn btn-secondary" type="reset" value="Cancelar">
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
-  {% endblock %}
+
+</section>
+
+{% endblock %}
