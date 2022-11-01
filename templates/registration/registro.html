@@ -1,0 +1,19 @@
+{% extends "./base_registro.html" %}
+    
+{% block titulo %}Registro de Usuario{% endblock %}
+    
+{% block contenido %}
+{% load crispy_forms_tags %}
+<h2 class="h1-responsive font-weight-bold text-center my-4">~  Registro de Usuario ~</h2>
+<hr>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form | crispy }}
+        <br>
+        <a href="{% url 'inicio' %}">Ir al Inicio</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'login' %}">Iniciar sesión</a>
+        <hr>
+        <input type="submit" value="Registrar" class="btn btn-dark">
+    </form>
+{% endblock %}

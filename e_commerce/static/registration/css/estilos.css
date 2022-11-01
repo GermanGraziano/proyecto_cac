@@ -1,0 +1,33 @@
+body{
+    background-image: url('../../../../../static/img/libro_registro.jpg');
+    background-position: center;    
+    background-size: cover;         
+    background-repeat: no-repeat;   
+    font-family: 'Cabin', sans-serif;
+}
+
+form{
+    margin: 10px;
+}
+
+h2{
+    font-weight: 600;
+}
+
+.card-body{
+    background-color: rgb(223, 217, 230);
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    margin-left: 190px;
+}
+
+a{
+    color: black;
+}
+
+a:hover{
+    color: rgb(73, 73, 73);
+}

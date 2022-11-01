@@ -3,11 +3,111 @@ body{
     font-family: 'Cabin', sans-serif;
 }
 
+#img_carrito{
+    margin-top: 10px;
+}
+
 .carousel-item img{
     max-height: 30rem;
 }
 
-.contacto{
-    color: white;
+#carouselExampleControls{
+    padding-left: 80px;
+    padding-top: 80px;
+    padding-bottom: 30px;
+}
+
+.carousel-control-prev{
+    margin-left: -50px;
+}
+
+.card{
+    margin: 15px 30px;
+}
+
+#card_libro:hover {
+    /* Transformación: escalado */
+    transform:scale(1.05,1.05);
+    -webkit-transform:scale(1.05,1.05);
+    -ms-transform:scale(1.05,1.05);
+  }
+
+h2{
+    font-weight: 600;
+}
+
+.card-title{
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.card-text{
+    font-size: 0.9rem;
+}
+
+.card-body{
+    background-color: rgb(223, 217, 230);
+}
+
+.mas_info{
+    color:black;
+}
+
+.mas_info:hover{
+    color: rgb(119, 119, 119);
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+}
+
+.col-md-4{
+    text-align: center;
+    margin-left: 100px;
+}
+
+.container_datos{
+    color:  rgb(233, 218, 218);
+    border-radius: 2rem;
+    width: 400px;
+    height: 280px;
+    background-color: rgb(110, 104, 104);
+    margin-top: 160px;
+    margin-left: 30px;
+    padding: 20px 40px;
+}
+
+a i{
+    color: rgb(233, 218, 218);
+}
+
+@media screen and (max-width: 1200px) and (min-width: 950px){
+    .container_datos{
+        width: 320px;
+        height: 280px;
+        background-color: rgb(110, 104, 104);
+        margin-top: 160px;
+        margin-left: 10px;
+    }
+
+    .col-md-4{
+        margin-left: 80px;
+    }
+}
+
+@media screen and (max-width: 950px){
+    .container_datos{
+        width: 320px;
+        height: 280px;
+        background-color: rgb(110, 104, 104);
+        margin-top: 20px;
+        margin-left: 50px;
+    }
+
+    .col-md-4{
+        margin-left: 75px;
+    }
 }
 

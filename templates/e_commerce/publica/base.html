@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
 
+    <script src="https://kit.fontawesome.com/3682b977b2.js" crossorigin="anonymous"></script>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
@@ -44,10 +46,13 @@
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav ms-auto">
                     <li class = "nav-item">
+                      <a class = "navbar-brand" href="#"><i class="fa-solid fa-cart-shopping" id="img_carrito"></i></a>
+                    </li>
+                    <li class = "nav-item">
                         <a class="nav-link active" href="#">Inicio</a>
                     </li>
                     <li class = "nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" href="#">Categorías</a>
+                        <a class="nav-link active dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" href="#">Categorías</a>
                         <ul class="dropdown-menu bg-light">
                             <li class ="dropdown-item"><a class="nav-link " href = "#artes"></a>Artes</li>
                             <li class ="dropdown-item"><a class="nav-link" href = "#biologia"></a>Biología</li>
@@ -59,11 +64,24 @@
                         </ul>
                     </li>
                     <li class = "nav-item">
-                      <a class="nav-link" href="#contacto">Contacto</a>
-                  </li>
+                      <a class="nav-link active" href="#contacto">Contacto</a>
+                    </li>
+                    {% if user.is_authenticated %}
                     <li class = "nav-item">
-                        <a class="nav-link active" href="#">Mi Cuenta</a>
-                    </li>           
+                      <a class="nav-link active" href="#">@{{ user.username}}</a>
+                      <ul class="dropdown-menu bg-light">
+                        <li class = "dropdown-item"><a class="nav-link active" href="{% url 'logout' %}">Cerrar Sesión</a></li>
+                      </ul>
+                    </li>
+                    {% else %}
+                    <li class = "nav-item dropdown">
+                      <a class="nav-link active dropdown-toggle" role="button" data-bs-toggle="dropdown" href="#">Mi Cuenta</a>
+                      <ul class="dropdown-menu bg-light">
+                        <li class ="dropdown-item"><a class="nav-link active" href = "{% url 'login' %}"></a>Iniciar Sesión</li>
+                        <li class ="dropdown-item"><a class="nav-link active" href = "{% url 'registro' %}"></a>Registrarme</li>
+                      </ul>
+                    </li>
+                    {% endif %}
                 </ul>
                 <hr class="text-white-50">    
               </div> 

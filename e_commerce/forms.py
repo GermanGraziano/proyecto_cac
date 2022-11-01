@@ -2,6 +2,8 @@ from email.policy import default
 from logging import PlaceHolder
 from django import forms
 from django.forms import ValidationError
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 
 def solo_caracteres(valor):
     if any(char.isdigit() for char in valor):
@@ -14,8 +16,8 @@ opciones_asunto = [
     (3, 'Sugerencia'), 
     (4, 'Felicitaciones'),
     (5, 'Otros')
-]
-'''
+]'''
+
 class ContactoForm(forms.Form):
 
     nombre = forms.CharField(
@@ -38,14 +40,16 @@ class ContactoForm(forms.Form):
         )
 
     asunto = forms.CharField(
-            label='Asunto',
-            max_length=100,
-            error_messages={
-                'required':'Por favor, ingrese el asunto'
-            },
-            validators=(solo_caracteres,),
-            widget=forms.TextInput(attrs={'class':'form-control'})
+        label='Asunto',
+        max_length=100,
+        error_messages={
+           'required':'Por favor, ingrese el asunto'
+        },
+        validators=(solo_caracteres,),
+        widget=forms.TextInput(attrs={'class':'form-control'})
         )
+
+    '''asunto = forms.IntegerField(max_length=50,choices=opciones_asunto,default=1)'''
 
     mensaje = forms.CharField(
         label='Mensaje',
@@ -68,5 +72,14 @@ class ContactoForm(forms.Form):
             raise ValidationError('Debe especificar mejor el mensaje')
         return data
 
-
-
+class UserRegisterForm(UserCreationForm):
+    email = forms.EmailField(
+        widget=forms.TextInput(attrs={'class':'form-control','type':'email','placeholder':'info@gmail.com'})
+    )
+    password1 = forms.CharField(label='Contraseña',widget=forms.PasswordInput)
+    password2 = forms.CharField(label='Confirmar Contraseña',widget=forms.PasswordInput)
+    
+    class Meta:
+        model = User
+        fields = ['username', 'email', 'password1', 'password2']
+        help_texts = {k:"" for k in fields} #para que no aparezcan los textos de ayuda
