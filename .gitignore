@@ -1,3 +1,4 @@
 db.sqlite3
+__pycache__
 proyecto_cac/__pycache__/
-proyecto_cac/e_commerce/__pycache__/
+e_commerce/__pycache__

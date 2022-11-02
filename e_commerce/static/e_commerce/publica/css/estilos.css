@@ -83,7 +83,7 @@ a i{
     color: rgb(233, 218, 218);
 }
 
-@media screen and (max-width: 1200px) and (min-width: 950px){
+@media screen and (max-width: 1200px) and (min-width: 992px){
     .container_datos{
         width: 320px;
         height: 280px;
@@ -97,9 +97,9 @@ a i{
     }
 }
 
-@media screen and (max-width: 950px){
+@media screen and (max-width: 992px){
     .container_datos{
-        width: 320px;
+        width: 340px;
         height: 280px;
         background-color: rgb(110, 104, 104);
         margin-top: 20px;
@@ -108,6 +108,12 @@ a i{
 
     .col-md-4{
         margin-left: 75px;
+    }
+}
+
+@media screen and (max-width: 767.5px){
+    .col-md-4{
+        margin-left: -5px;
     }
 }
 
