@@ -1,3 +1,5 @@
 db.sqlite3
 proyecto_cac/__pycache__/
 proyecto_cac/e_commerce/__pycache__/
+Pipfile
+Pipfile.lock
